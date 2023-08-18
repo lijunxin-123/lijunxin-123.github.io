@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on JunXin Li</title>
+    <link>https://lijunxin-123.github.io/categories/</link>
+    <description>Recent content in Categories on JunXin Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Aug 2023 16:38:23 +0800</lastBuildDate><atom:link href="https://lijunxin-123.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Who Am I ？</title>
+      <link>https://lijunxin-123.github.io/categories/who-am-i/</link>
+      <pubDate>Wed, 16 Aug 2023 16:38:23 +0800</pubDate>
+      
+      <guid>https://lijunxin-123.github.io/categories/who-am-i/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
