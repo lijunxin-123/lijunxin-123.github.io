@@ -17,8 +17,8 @@
   },
   "name":"JunXin Li",
   "description":"",
-  "url":"https:\/\/lijunxin-123.github.io\/page\/profile\/",
-  "keywords":"[resume]"
+  "url":"https:\/\/lijunxin-123.github.io\/page\/blog2\/",
+  "keywords":"[tech]"
 }
 
 </script>
@@ -27,36 +27,40 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.117.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="JunXin Li ">
-<meta name="keywords" content="resume">
+<meta name="keywords" content="tech">
 <meta name="description" content="">
 
 
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="About Me">
-<meta name="twitter:title" content="About Me">
-<meta property="og:url" content="https://lijunxin-123.github.io/page/profile/">
-<meta property="twitter:url" content="https://lijunxin-123.github.io/page/profile/">
+<meta property="og:title" content="浅析多态">
+<meta name="twitter:title" content="浅析多态">
+<meta property="og:url" content="https://lijunxin-123.github.io/page/blog2/">
+<meta property="twitter:url" content="https://lijunxin-123.github.io/page/blog2/">
 <meta property="og:site_name" content="JunXin Li">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
 <meta property="og:locale" content="en">
 
   
-    <meta property="article:published_time" content="2023-08-16T15:17:54">
+    <meta property="article:published_time" content="2023-08-21T17:30:42">
   
   
-    <meta property="article:modified_time" content="2023-08-16T15:17:54">
+    <meta property="article:modified_time" content="2023-08-21T17:30:42">
   
-  
-  
-    
-      <meta property="article:section" content="Who Am I ？">
-    
   
   
     
-      <meta property="article:tag" content="sweet girl">
+      <meta property="article:section" content="category">
+    
+      <meta property="article:section" content="subcategory">
+    
+  
+  
+    
+      <meta property="article:tag" content="tag1">
+    
+      <meta property="article:tag" content="tag2">
     
   
 
@@ -76,18 +80,15 @@
 
 
 
-  <meta property="og:image" content="https://lijunxin-123.github.io/image/who_am_i_img1.jpg">
-  <meta property="twitter:image" content="https://lijunxin-123.github.io/image/who_am_i_img1.jpg">
 
-
-    <title>About Me</title>
+    <title>浅析多态</title>
 
     <link rel="icon" href="https://lijunxin-123.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://lijunxin-123.github.io/page/profile/">
+    <link rel="canonical" href="https://lijunxin-123.github.io/page/blog2/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -245,53 +246,277 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      About Me
+      浅析多态
     </h1>
   
   
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-08-16T15:17:54&#43;08:00">
-        
-   16, 2023
-
-      </time>
-    
-    
-  
-  
-    <span></span>
-    
-      <a class="category-link" href="https://lijunxin-123.github.io/categories/who-am-i">Who Am I ？</a>
-    
-  
-
-  </div>
-
 </div>
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h1 style="color: rgb(127, 131, 255);">WHO I AM</h1>
-<span>
-    <img src="https://lijunxin-123.github.io/image/my_photo.jpg" height="190" align="right">
-    <b style="color:  rgb(101, 105, 209);">Name:</b> JunXin Li<br>
-    <b style="color:  rgb(101, 105, 209);"> Birth:</b> 2003<br>
-    <b style="color:  rgb(101, 105, 209);">Birthplace:</b> Japan(Wants know more?Click the link:<a href="../birth_secret/">The secret of my birth</a>)<br>
-    <b style="color:  rgb(101, 105, 209);">Phone:</b> 17816117959(please contact me use WeChat:LJX2031500327 first)<br>
-    <b style="color:  rgb(101, 105, 209);">E-mail:</b> 2021212205137@stu.hznu.edu.cn
-</span>
+              <h3 id="多态">多态</h3>
+<h5 id="-1多态概念">-&gt;1.多态概念</h5>
+<h5 id="-2类型转换upcastingdowncasting">-&gt;2.类型转换（upcasting&amp;downcasting）</h5>
+<h5 id="-3动态绑定">-&gt;3.动态绑定</h5>
+<h5 id="-4抽象类">-&gt;4.抽象类</h5>
+<h5 id="-5实例讲解">-&gt;5.实例讲解</h5>
+<h4 id="1多态概念">1.多态概念：</h4>
+<p>多态（Polymorphism）按字面的意思就是“多种状态”。在面向对象语言中，接口的多种不同的实现方式即为多态。多态性是允许你将父对象设置成为一个或更多的他的子对象相等的技术，赋值之后，父对象就可以根据当前赋值给它的子对象的特性以不同的方式运作。简单的说，就是一句话：允许将子类类型的指针赋值给父类类型的指针。
+父类型变量可以引用子类型的对象，父类型对象访问派生类重写的方法。</p>
+<p>多态概括来说涉及两个运用方面：*循环调用基类对象，访问不同派生类方法<br>
+*实参是派生类；形参是基类</p>
+<h5 id="2多态存在的三个必要条件">2.多态存在的三个必要条件：</h5>
+<p>继承；
+重写；
+向上转型；</p>
+<h4 id="2类型转换upcastingdowncasting">2.类型转换(upcasting&amp;downcasting)</h4>
+<h6 id="1向上转型upcasting">（1).向上转型（upcasting）</h6>
+<pre><code>Object a=new Circle();
 
-<p>
-    Living in Zhengzhou,Henan Province,studying in Hangzhou Normal University(the Alma mater of Jack Ma),I have a very 
-    wram family ,both of my parents are college professors,a sister who is five years older than me.   
-    Graduated from Zhengzhou No.1 Middle School in 2021,the college entrance examination was somewhat unsatisfactory,but 
-    this stimulates me more in my college-study. <br>
-    "Accept all the surprises in life 💕"
-</p>
+此语句将对象new Circle()赋值给一个Object类型的参数a。因为Circle类是Object类的子类，所以Circle类型的实例也是Object类型的实例，上述语句是合法的，将这种转换成为upcasting。向上转型特点：
+</code></pre>
+<p>1.不需要强制转型；</p>
+<p>2.父类引用指向的或者调用的方法为子类的方法（动态绑定）；</p>
+<p>3.向上转型只能调用子类重写的方法，子类自己的方法不能调用。</p>
+<h6 id="2向下转型downcasting">(2).向下转型（downcasting）</h6>
+<pre><code>   Circle b=a;(此语句编译失败，因为Object对象不一定是Circle的实例)
 
+   Circle b=(Circle)a;（使用显示转换，声明a是一个Circle对象）
 
+   Q：如何判断一个父类型的对象是不是子类型的实例呢？
 
+   A：引入instanceof操作符实现
+
+       If(a instanceof Circle){
+</code></pre>
+<p>//判断Object类型的a是否为Circle的实例</p>
+<pre><code>          System.out.println((Circle)a.getArea());
+</code></pre>
+<p>}</p>
+<h4 id="3动态绑定">3.动态绑定:</h4>
+<p>方法可以在沿着继承链的多个类中实现。方法可以在父类中定义，而在子类中重写。</p>
+<p>思考代码：</p>
+<pre><code>    Object a=new circle();
+</code></pre>
+<p>toString();
+两个术语：声明类型、实际类型</p>
+<pre><code>    声明类型：变量的这个类型为声明类型，这里a的声明类型为Object；
+
+        实际类型：示例可以使用声明类型（父类型）或它的子类型的构造方法创建,变量引用的对象的实际类为实际类型。这里a的实际类为circle。
+</code></pre>
+<p>Q：这里的a调用的是哪一个toString()呢？</p>
+<p>A：a调用方法由a的实际类型决定。这称为动态绑定。</p>
+<p>下面示例解释动态绑定：</p>
+<pre tabindex="0"><code>pubic static void main(String[] args){
+    m(new GraduateStudent());
+    m(new Student());
+    m(new Person());
+    m(new Object());
+}
+public static void m(Object x){
+    System.out.println(x.toString());
+}
+class GraduateStudent extends Student{}
+class Student extends Person{
+    @Override
+    public String toString(){
+        return &#34;Student&#34;;
+    }
+}
+class Person extends Ojbect{
+    @Override
+    public String toString(){
+        return &#34;Person&#34;;
+    }
+}
+</code></pre><p>方法m有一个object参数，而person、student、GraduateStudent延继承链均为object的子类，所以执行m(object x)方法时，x可能是GraduateStudent、Student、Person或者Object的实例，类toString()在Student、Person、Object中均有自己的实现方法，使用哪个实现取决于x的实际类型。如m( new GraduateStudent())会调用其父类Student中的toString方法。</p>
+<h4 id="4抽象类">4.抽象类</h4>
+<h6 id="1思考从软件设计人员的角度来看作为矩形和圆形等具体形状类的共同父类图形类表示的是一种抽象的概念既不应该允许下层的代码人员创建出geometry类的具体实例常规的类不能满足此要求">(1).思考：从软件设计人员的角度来看，作为矩形和圆形等具体形状类的共同父类，图形类表示的是一种抽象的概念，既不应该允许下层的代码人员创建出Geometry类的具体实例——常规的类不能满足此要求；</h6>
+<h6 id="2解决办法">(2).解决办法：</h6>
+<p>通过abstract关键字将getArea方法修饰为抽象的，此时的方法称为抽象方法。</p>
+<p>抽象方法事出现在基类的一种方法，但要求在派生类中被重写。</p>
+<h6 id="3格式一个抽象方法只有方法头没有方法主体">(3).格式：一个抽象方法只有方法头，没有方法主体</h6>
+<p>访问修饰符 abstract 返回类型 方法名（参数列表）；</p>
+<h6 id="4抽象方法">(4).抽象方法：</h6>
+<p>包含抽象方法的类会自动变成抽象类，因此必须以abstract 关键字声明。</p>
+<p><code>Public abstract class 类名</code></p>
+<h6 id="5例子">(5).例子</h6>
+<pre tabindex="0"><code>abstract class B  //创建抽象类B{
+
+private String str; //私有成员变量str
+
+public B(String a) //抽象类的构造函数{
+
+        this.str=a;
+
+ }
+public abstract void play(); //抽象类中的play()抽象方法
+
+}
+
+public class A extends B  //A类继承抽象类B {
+
+public A(String a) //A的构造函数{
+
+super(a);
+
+}
+
+    @Override  //覆盖父类B中的play()
+
+    public void play(){
+
+        System.out.println(&#34;重写抽象类中的play方法&#34;);
+
+        }
+
+}
+</code></pre><h4 id="5实例讲解">5.实例讲解</h4>
+<h6 id="1引入一个较为典型的例子">（1）引入一个较为典型的例子</h6>
+<pre tabindex="0"><code>public class animal{
+	public static void main(String[] args) {
+		animals c=new cat();
+		animals d=new dog();
+		c.say();
+		d.say();
+	}
+}
+abstract class animals {
+		public abstract void say();
+	
+}
+class cat extends animals{
+	@Override
+	public void say() {
+		System.out.println(&#34;喵喵喵&#34;);
+	}
+}
+class dog extends animals{
+	@Override
+	public void say() {
+		System.out.println(&#34;汪汪汪&#34;);
+	}
+}
+</code></pre><p>此实例中，运用到了abstract抽象类，在基类animals中定义say方法，在子类cat和dog中重写这个方法，在主类声明中，向上转换并调用say方法。</p>
+<h6 id="2">（2）</h6>
+<pre tabindex="0"><code>public class demo04 {
+	    public static void main(String[] args) {
+	        People p=new Stu();
+	        p.eat();
+	        //调用特有的方法
+	        Stu s=(Stu)p;
+	        s.study();
+	        //((Stu) p).study();
+	    }
+	}
+	class People{
+	    public void eat(){
+	        System.out.println(&#34;吃饭&#34;);
+	    }
+	}
+	class Stu extends People{
+	    @Override
+	    public void eat(){
+	        System.out.println(&#34;吃水煮肉片&#34;);
+	    }
+	    public void study(){
+	        System.out.println(&#34;好好学习&#34;);
+	    }
+	}
+	class Teachers extends People{
+	    @Override
+	    public void eat(){
+	        System.out.println(&#34;吃樱桃&#34;);
+	    }
+	    public void teach(){
+	        System.out.println(&#34;认真授课&#34;);
+	    }
+	}
+ 
+
+输出：吃水煮肉片
+
+           好好学习
+</code></pre><h6 id="2循环调用基类对象">2.循环调用基类对象</h6>
+<p>可以通过多态实现不同类的同一（重写）方法的调用，可以增强代码的可读性。</p>
+<pre tabindex="0"><code>public class Money {
+	public static void main(String[] args) {
+		changemoney[] list=new changemoney[3];
+		list[0]=new rmb(100);
+		list[1]=new dollar(100);
+		list[2]=new pound(100);
+		for(int i=0;i&lt;3;i++) {
+			System.out.println(list[i].setmoney());
+		}
+	}
+ 
+}
+class changemoney{
+	private double money;
+	public changemoney() {
+	}
+	public changemoney(double newrmb) {
+		this.money=newrmb;
+	}
+	public double setmoney() {
+		return money;
+	}
+}
+class rmb extends changemoney{
+	private double rmb;
+	public rmb(double newrmb) {
+			rmb=newrmb;
+	}
+	@Override
+	public double setmoney() {
+		return rmb;
+	}
+}
+class dollar extends changemoney{
+	private double dollar;
+	public dollar(double newdollar) {
+		dollar=newdollar;
+	}
+	@Override
+	public double setmoney() {
+		return dollar/6.55;
+	}
+}
+class pound extends changemoney{
+	private double pound;
+	public pound(double newpound) {
+		pound=newpound;
+	}
+	@Override
+	public double setmoney() {
+		return pound/8.2464;
+	}
+}
+
+//使用循环实现输出。
+</code></pre><p>输出：100.0</p>
+<pre><code>       15.26715572519085
+
+       12.126503686457122     //输出rmb、dollar、pound
+</code></pre>
+<h6 id="3实参是派生类形参是基类">3.实参是派生类；形参是基类</h6>
+<p>public class CastingDemo{
+public static void main(String[] args){
+Object object1=new Circle(1);
+Object object2=new Rectangle(1,1);
+displayObject(object1);
+displayObject(object2);</p>
+<pre><code>    public static void displayObject(Object object){
+        if(object instanceof Circle){
+            System.out.println(&quot;The circle area is&quot;+((Circle)object).getArea());
+        }
+        else if(object instanceof Rectangle){
+            System.out.println(&quot;The rectangle area is&quot;+((Rectangle)object).getArea());
+        }
+    }
+}
+</code></pre>
+<p>}</p>
               
 
 
@@ -305,7 +530,9 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small"></span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://lijunxin-123.github.io/tags/sweet-girl/">sweet girl</a>
+  <a class="tag tag--primary tag--small" href="https://lijunxin-123.github.io/tags/tag1/">tag1</a>
+
+  <a class="tag tag--primary tag--small" href="https://lijunxin-123.github.io/tags/tag2/">tag2</a>
 
                   </div>
                 
@@ -320,9 +547,9 @@
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/lijunxin-123.github.io\/page\/profile\/';
+        this.page.url = 'https:\/\/lijunxin-123.github.io\/page\/blog2\/';
         
-          this.page.identifier = '\/page\/profile\/'
+          this.page.identifier = '\/page\/blog2\/'
         
       };
       (function() {
@@ -360,19 +587,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flijunxin-123.github.io%2Fpage%2Fprofile%2F" aria-label="">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flijunxin-123.github.io%2Fpage%2Fblog2%2F" aria-label="">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span></span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flijunxin-123.github.io%2Fpage%2Fprofile%2F" aria-label="">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flijunxin-123.github.io%2Fpage%2Fblog2%2F" aria-label="">
           <i class="fab fa-twitter" aria-hidden="true"></i><span></span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flijunxin-123.github.io%2Fpage%2Fprofile%2F" aria-label="">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flijunxin-123.github.io%2Fpage%2Fblog2%2F" aria-label="">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span></span>
         </a>
       </li>

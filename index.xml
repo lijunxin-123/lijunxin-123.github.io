@@ -6,22 +6,13 @@
     <description>Recent content on JunXin Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Aug 2023 22:02:41 +0800</lastBuildDate><atom:link href="https://lijunxin-123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Aug 2023 17:30:42 +0800</lastBuildDate><atom:link href="https://lijunxin-123.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://lijunxin-123.github.io/page/profile/</link>
       <pubDate>Wed, 16 Aug 2023 15:17:54 +0800</pubDate>
       
       <guid>https://lijunxin-123.github.io/page/profile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Internship</title>
-      <link>https://lijunxin-123.github.io/page/internship/</link>
-      <pubDate>Wed, 16 Aug 2023 22:02:41 +0800</pubDate>
-      
-      <guid>https://lijunxin-123.github.io/page/internship/</guid>
       <description></description>
     </item>
     
@@ -35,6 +26,33 @@
     </item>
     
     <item>
+      <title>Internship</title>
+      <link>https://lijunxin-123.github.io/page/internship/</link>
+      <pubDate>Wed, 16 Aug 2023 22:02:41 +0800</pubDate>
+      
+      <guid>https://lijunxin-123.github.io/page/internship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blogs</title>
+      <link>https://lijunxin-123.github.io/page/blogs/</link>
+      <pubDate>Mon, 21 Aug 2023 17:16:16 +0800</pubDate>
+      
+      <guid>https://lijunxin-123.github.io/page/blogs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>浅析多态</title>
+      <link>https://lijunxin-123.github.io/page/blog2/</link>
+      <pubDate>Mon, 21 Aug 2023 17:30:42 +0800</pubDate>
+      
+      <guid>https://lijunxin-123.github.io/page/blog2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>My Life</title>
       <link>https://lijunxin-123.github.io/page/my_life/</link>
       <pubDate>Wed, 16 Aug 2023 22:01:21 +0800</pubDate>
@@ -44,11 +62,11 @@
     </item>
     
     <item>
-      <title>Daily Study</title>
-      <link>https://lijunxin-123.github.io/page/daily_study/</link>
+      <title>在Win10上安装eclipse与eclipse中git的安装、配置、使用问题</title>
+      <link>https://lijunxin-123.github.io/page/blog1/</link>
       <pubDate>Wed, 16 Aug 2023 22:00:29 +0800</pubDate>
       
-      <guid>https://lijunxin-123.github.io/page/daily_study/</guid>
+      <guid>https://lijunxin-123.github.io/page/blog1/</guid>
       <description></description>
     </item>
     
